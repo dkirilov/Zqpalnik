@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+     <head>
+	    <!-- Required meta tags -->
+		<meta charset="<?= DEFAULT_CHARSET ?>">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	     <!-- Flexbox grid -->
+		 <link rel="stylesheet" href="<?= BASE_URL . '/' . TEMPLATES_DIR . 'Zqpalnik/front/css/flexboxgrid.min.css' ?>">
+		 <!-- Font awesome -->
+		 <link rel="stylesheet" href="<?= BASE_URL . '/' . TEMPLATES_DIR . 'Zqpalnik/front/css/fontawesome/css/all.min.css' ?>">
+    	 <!-- My customizations CSS -->
+		<link rel="stylesheet" href="<?= BASE_URL . '/' . TEMPLATES_DIR . 'Zqpalnik/front/css/customiz.css' ?>">
+
+	     <title><?= \core\Template::getTitle(); ?></title>
+	 </head>
+	 <body>
+                <header>
+					     <div class="row">
+						     <!-- Logo column -->
+						     <div class="col-xs-4  col-sm-2">
+							     <div class="box">
+								    <p class='site-logo'><?= strtoupper(SITE_NAME); ?></p>
+								 </div>
+							 </div>
+						     <div class="col-xs-8 col-sm-10">
+							     <div class="box">
+									 <!-- Main nav-->
+								     <nav id="main_nav" class="horizontal-nav horizontal-nav-bar-btns">
+									    <ul>
+										   <li><a href="#"><i class="fa fa-home"></i> <span class='hnav-bar-btn-txt hover-label'>Home</span></a></li>
+										   <li><a href="#"><i class="fa fa-film"></i> <span class='hnav-bar-btn-txt hover-label'>Videos</span></a></li>
+										   <li><a href="#"><i class="fa fa-broadcast-tower "></i> <span class='hnav-bar-btn-txt hover-label'>Channels</span></a></li>
+										   <li><a href="#"><i class="fa fa-list-ul "></i> <span class='hnav-bar-btn-txt hover-label'>Playlists</span></a></li>
+										   <li><a href="#"><i class="fa fa-users"></i> <span class='hnav-bar-btn-txt hover-label'>Users</span></a></li>
+										   <li><a href="#" onclick="$('#main_nav').toggle(); $('#main_search').toggle();"><i class="fa fa-search"></i> <span class='hnav-bar-btn-txt hover-label'>Search</span></a></li>
+										   <li>&nbsp;&nbsp;<a href="#"><i class="fa fa-sign-in-alt "></i> <span class='hnav-bar-btn-txt hover-label'>Log in</span></a> or <a href="#"><i class="fa fa-user-plus "></i> <span class='hnav-bar-btn-txt hover-label'>Sign up</span></a></li>
+										</ul>
+									 </nav>				 
+                                   
+								    <form id="main_search" class="search-form">
+									    <input type="text" name="searchfor" placeholder="Search for...">
+										<select name="search-type">
+										   <option value="all">Everything</option>
+										   <option value="users">Users</option>
+										   <option value="videos">Videos</option>
+										   <option value="channels">Channels</option>
+										   <option value="playlists">Playlists</option>
+										</select>
+										<button type="submit" name="search-submit"><i class="fa fa-search"></i></button>
+										&nbsp;&nbsp;
+										<button type="button" class="close hover-label-wrapper" onclick="$('#main_nav').toggle(); $('#main_search').toggle();"><i class='fa fa-times'></i><span class="hnav-bar-btn-txt hover-label">Hide the search form</span></button>
+									</form>
+								 </div>
+							 </div>
+                        </div>							 
+					</header>
+					
