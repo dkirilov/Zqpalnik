@@ -3,7 +3,7 @@
      <head>
 	    <!-- Required meta tags -->
 		<meta charset="<?= DEFAULT_CHARSET ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
 
 	     <!-- Flexbox grid -->
 		 <link rel="stylesheet" href="<?= BASE_URL . '/' . TEMPLATES_DIR . 'Zqpalnik/front/css/flexboxgrid.min.css' ?>">
@@ -15,26 +15,57 @@
 	     <title><?= \core\Template::getTitle(); ?></title>
 	 </head>
 	 <body>
+	        <div>
                 <header>
 					     <div class="row">
 						     <!-- Logo column -->
-						     <div class="col-xs-4  col-sm-2">
+						     <div class="col-xs-3  col-sm-2">
 							     <div class="box">
 								    <p class='site-logo'><?= strtoupper(SITE_NAME); ?></p>
 								 </div>
 							 </div>
-						     <div class="col-xs-8 col-sm-10">
+						     <div class="col-xs-9 col-sm-10">
 							     <div class="box">
 									 <!-- Main nav-->
 								     <nav id="main_nav" class="horizontal-nav horizontal-nav-bar-btns">
 									    <ul>
-										   <li><a href="#"><i class="fa fa-home"></i> <span class='hnav-bar-btn-txt hover-label'>Home</span></a></li>
-										   <li><a href="#"><i class="fa fa-film"></i> <span class='hnav-bar-btn-txt hover-label'>Videos</span></a></li>
-										   <li><a href="#"><i class="fa fa-broadcast-tower "></i> <span class='hnav-bar-btn-txt hover-label'>Channels</span></a></li>
-										   <li><a href="#"><i class="fa fa-list-ul "></i> <span class='hnav-bar-btn-txt hover-label'>Playlists</span></a></li>
-										   <li><a href="#"><i class="fa fa-users"></i> <span class='hnav-bar-btn-txt hover-label'>Users</span></a></li>
-										   <li><a href="#" onclick="$('#main_nav').toggle(); $('#main_search').toggle();"><i class="fa fa-search"></i> <span class='hnav-bar-btn-txt hover-label'>Search</span></a></li>
-										   <li>&nbsp;&nbsp;<a href="#"><i class="fa fa-sign-in-alt "></i> <span class='hnav-bar-btn-txt hover-label'>Log in</span></a> or <a href="#"><i class="fa fa-user-plus "></i> <span class='hnav-bar-btn-txt hover-label'>Sign up</span></a></li>
+										   <li><a href="#" class="btn"><i class="fa fa-home"></i> <span class='hnav-bar-btn-txt hover-label'>Home</span></a></li>
+										   <li><a href="#" class="btn" onclick="$('ul.horizontal-nav-dropdown').toggle();"><i class="fa fa-film"></i> <span class='hnav-bar-btn-txt hover-label'>Videos</span> <i class="fa fa-angle-down"></i></a>
+										           <ul class="horizontal-nav-dropdown" onmouseleave="$('ul.horizontal-nav-dropdown').hide();">
+												        <li class="horizontal-nav-dropdown-section"><a href="#" onclick="$('.hnd-section-movies-elem').toggle();">Movies <i class="fa fa-angle-down"></i></a></li>
+														    <li class="hnd-section-movies-elem"><a href="#">Comedy</a></li>
+															<li class="hnd-section-movies-elem"><a href="#">Drama</a></li>
+															<li class="hnd-section-movies-elem"><a href="#">Horror</a></li>
+															<li class="hnd-section-movies-elem"><a href="#">Sci-fi</a></li>
+															<li class="hnd-section-movies-elem"><a href="#">Anime</a></li>
+															<li class="hnd-section-movies-elem"><a href="#">Documental</a></li>
+															<li class="hnd-section-movies-elem"><a href="#">etc.</a></li>
+														<li class="horizontal-nav-dropdown-section"><a href="#" onclick="$('.hnd-section-tvseries-elem').toggle();">TV Series <i class="fa fa-angle-down"></i></a></li>
+														    <li class="hnd-section-tvseries-elem"><a href="#">Comedy</a></li>
+															<li class="hnd-section-tvseries-elem"><a href="#">Drama</a></li>
+															<li class="hnd-section-tvseries-elem"><a href="#">Horror</a></li>
+															<li class="hnd-section-tvseries-elem"><a href="#">Sci-fi</a></li>
+															<li class="hnd-section-tvseries-elem"><a href="#">Anime</a></li>
+															<li class="hnd-section-tvseries-elem"><a href="#">Documental</a></li>
+															<li class="hnd-section-tvseries-elem"><a href="#">etc.</a></li>
+														<li class="horizontal-nav-dropdown-section"><a href="#" onclick="$('.hnd-section-musical-elem').toggle();">Musical <i class="fa fa-angle-down"></i></a></li>
+														    <li class="hnd-section-musical-elem"><a href="#">Heavy Metal</a></li>
+															<li class="hnd-section-musical-elem"><a href="#">Rock</a></li>
+															<li class="hnd-section-musical-elem"><a href="#">Hip-hop</a></li>
+															<li class="hnd-section-musical-elem"><a href="#">Pop</a></li>
+															<li class="hnd-section-musical-elem"><a href="#">House</a></li>
+															<li class="hnd-section-musical-elem"><a href="#">etc.</a></li>
+														<li class="horizontal-nav-dropdown-section"><a href="#">Funny</a></li>
+														<li class="horizontal-nav-dropdown-section"><a href="#">Educational</a></li>
+														<li class="horizontal-nav-dropdown-section"><a href="#">News</a></li>
+														<li class="horizontal-nav-dropdown-section"><a href="#">Others</a></li>																												
+												   </ul>
+										   </li>
+										   <li><a href="#" class="btn"><i class="fa fa-broadcast-tower "></i> <span class='hnav-bar-btn-txt hover-label'>Channels</span></a></li>
+										   <li><a href="#" class="btn"><i class="fa fa-list-ul "></i> <span class='hnav-bar-btn-txt hover-label'>Playlists</span></a></li>
+										   <li><a href="#" class="btn"><i class="fa fa-users"></i> <span class='hnav-bar-btn-txt hover-label'>Users</span></a></li>
+										   <li><a href="#"  class="btn" onclick="$('#main_nav').toggle(); $('#main_search').toggle();"><i class="fa fa-search"></i> <span class='hnav-bar-btn-txt hover-label'>Search</span></a></li>
+										   <li>&nbsp;&nbsp;<a href="#" class="btn"><i class="fa fa-sign-in-alt "></i> <span class='hnav-bar-btn-txt hover-label'>Log in</span></a> or <a href="#" class="btn"><i class="fa fa-user-plus "></i> <span class='hnav-bar-btn-txt hover-label'>Sign up</span></a></li>
 										</ul>
 									 </nav>				 
                                    
