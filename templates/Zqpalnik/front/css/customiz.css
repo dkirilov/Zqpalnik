@@ -186,9 +186,52 @@ li[class*="hnd-section-"]{
 
 /**Beginning**  Mobile nav styles **/
 
-#mobile_nav{
-	 display: none;
-	 
+#right_sidebar{
+	display:none;
+	position: fixed;
+	height: 90%;
+    width: 50%;
+	max-width: 540px;
+    min-width: 270px;
+	background: #12181c;
+	border-left: 3px solid #357ea5;
+	right: -30px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	margin-top: 49px;
+	z-index: 1000;
+}
+
+#right_sidebar #mobile_nav ul {
+	padding-left: 0px;
+}
+
+#right_sidebar #mobile_nav ul li ul{
+	  display: none;
+	  padding-left: 20px;	
+}
+
+#right_sidebar #mobile_nav ul li{
+	  list-style-type: none;
+	  width: 100%;
+	  margin: 10px;
+}
+
+#right_sidebar #mobile_nav ul li a,
+#right_sidebar #mobile_nav ul li a:link,
+#right_sidebar #mobile_nav ul li a:visited{
+	 color: #EDEDED;
+	 text-decoration: none;
+	 font-weight: bold;
+	 font-size: 13pt;
+	 padding: 10px;
+	 width: 100%;
+	 line-height: 2;
+}
+#right_sidebar #mobile_nav ul li a:hover{
+    background: #EDEDED;
+	color: #12181c;
+	border-radius: 3px;
 }
 
 /**End**  Mobile nav styles **/

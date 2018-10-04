@@ -64,16 +64,11 @@
 										   <li><a href="#" class="btn"><i class="fa fa-broadcast-tower "></i> <span class='hnav-bar-btn-txt hover-label'>Channels</span></a></li>
 										   <li><a href="#" class="btn"><i class="fa fa-list-ul "></i> <span class='hnav-bar-btn-txt hover-label'>Playlists</span></a></li>
 										   <li><a href="#" class="btn"><i class="fa fa-users"></i> <span class='hnav-bar-btn-txt hover-label'>Users</span></a></li>
-										   <li class="show-on-mobile"><a href="#"  class="btn" onclick="$('#main_nav').toggle(); $('#main_search').toggle();"><i class="fa fa-search"></i> <span class='hnav-bar-btn-txt hover-label'>Search</span></a></li>
-										   <li class="show-on-mobile hide-on-bigger-dev"><a href="#"  class="btn" onclick="$('#mobile_nav').toggle();"><i class="fa fa-bars"></i> <span class='hnav-bar-btn-txt hover-label'>Expand the main menu</span></a></li>
+										   <li class="show-on-mobile"><a href="#"  class="btn" onclick="$('#right_sidebar').hide();  $('#main_nav').toggle(); $('#main_search').toggle();"><i class="fa fa-search"></i> <span class='hnav-bar-btn-txt hover-label'>Search</span></a></li>
+										   <li class="show-on-mobile hide-on-bigger-dev"><a href="#"  class="btn" onclick="$('#right_sidebar').toggle();"><i class="fa fa-angle-left"></i><i class="fa fa-bars"></i> <span class='hnav-bar-btn-txt hover-label'>Expand sidebar</span></a></li>
 										   <li>&nbsp;&nbsp;<a href="#" class="btn"><i class="fa fa-sign-in-alt "></i> <span class='hnav-bar-btn-txt hover-label'>Log in</span></a> or <a href="#" class="btn"><i class="fa fa-user-plus "></i> <span class='hnav-bar-btn-txt hover-label'>Sign up</span></a></li>
 										</ul>
-									 </nav>
-									 
-									 <!-- Mobile nav -->
-                                     <nav id="mobile_nav">
-									     
-									 </nav>
+									 </nav>								
                                    
 								     <!-- The main search form -->
 								    <form id="main_search" class="search-form">
@@ -93,4 +88,55 @@
 							 </div>
                         </div>							 
 					</header>
+					<aside id="right_sidebar" onmouseleave="$(this).hide();">
+						 <!-- Mobile nav -->
+						 <nav id="mobile_nav">
+							 <ul>
+							     <li><a href="#" class="btn"><i class="fa fa-home"></i> Home</a></li>
+								 <li onmouseleave="$('.mob-nav-sub-videos').hide();"><a href="#" class="btn" onclick="$('.mob-nav-sub-videos').toggle();"><i class="fa fa-film"></i> Videos <i class="fa fa-angle-down"></i></a>
+								        <ul class="mob-nav-sub-videos">
+	                                        <li onmouseleave="$('.mob-nav-sub-movies').hide();"><a href="#" class="btn" onclick="$('.mob-nav-sub-movies').toggle();">Movies <i class="fa fa-angle-down"></i></a>
+											     <ul class="mob-nav-sub-movies">
+												     <li><a href="#" class="btn">Comedy</a></li>
+												     <li><a href="#" class="btn">Drama</a></li>
+												     <li><a href="#" class="btn">Horror</a></li>
+												     <li><a href="#" class="btn">Sci-fi</a></li>
+												     <li><a href="#" class="btn">Anime</a></li>
+												     <li><a href="#" class="btn">Documental</a></li>
+												     <li><a href="#" class="btn">etc.</a></li>
+												 </ul>
+											</li>
+										    <li onmouseleave="$('.mob-nav-sub-tvseries').hide();"><a href="#" class="btn" onclick="$('.mob-nav-sub-tvseries').toggle();">TV Series <i class="fa fa-angle-down"></i></a>
+											     <ul class="mob-nav-sub-tvseries">
+												     <li><a href="#" class="btn">Comedy</a></li>
+												     <li><a href="#" class="btn">Drama</a></li>
+												     <li><a href="#" class="btn">Horror</a></li>
+												     <li><a href="#" class="btn">Sci-fi</a></li>
+												     <li><a href="#" class="btn">Anime</a></li>
+												     <li><a href="#" class="btn">Documental</a></li>
+												     <li><a href="#" class="btn">etc.</a></li>
+												 </ul>											
+											</li>
+										    <li onmouseleave="$('.mob-nav-sub-musical').hide();"><a href="#" class="btn" onclick="$('.mob-nav-sub-musical').toggle();">Musical <i class="fa fa-angle-down"></i></a>
+											     <ul class="mob-nav-sub-musical">
+												     <li><a href="#" class="btn">Heavy Metal</a></li>
+												     <li><a href="#" class="btn">Rock</a></li>
+												     <li><a href="#" class="btn">Hip-hop</a></li>
+												     <li><a href="#" class="btn">Pop</a></li>
+												     <li><a href="#" class="btn">House</a></li>
+												     <li><a href="#" class="btn">etc.</a></li>
+												 </ul>											
+											</li>
+											<li><a href="#" class="btn">Funny</a></li>
+											<li><a href="#" class="btn">Educational</a></li>
+											<li><a href="#" class="btn">News</a></li>
+											<li><a href="#" class="btn">Others</a></li>
+										</ul>
+								 </li>
+								 <li><a href="#" class="btn"><i class="fa fa-broadcast-tower"></i> Channels</a></li>
+								 <li><a href="#" class="btn"><i class="fa fa-list-ul"></i> Playlists</a></li>
+							     <li><a href="#" class="btn"><i class="fa fa-users"></i> Users</a></li>
+							 </ul>
+						 </nav>
+					</aside>
 					
