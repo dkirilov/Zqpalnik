@@ -233,7 +233,7 @@ li[class*="hnd-section-"]{
 	   }
 }
 
-@media only screen and (max-width: 950px){
+@media only screen and (max-width: 970px){
 	 span.hnav-bar-btn-txt{
 		  display: none;
 	 }
