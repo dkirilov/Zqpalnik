@@ -64,11 +64,18 @@
 										   <li><a href="#" class="btn"><i class="fa fa-broadcast-tower "></i> <span class='hnav-bar-btn-txt hover-label'>Channels</span></a></li>
 										   <li><a href="#" class="btn"><i class="fa fa-list-ul "></i> <span class='hnav-bar-btn-txt hover-label'>Playlists</span></a></li>
 										   <li><a href="#" class="btn"><i class="fa fa-users"></i> <span class='hnav-bar-btn-txt hover-label'>Users</span></a></li>
-										   <li><a href="#"  class="btn" onclick="$('#main_nav').toggle(); $('#main_search').toggle();"><i class="fa fa-search"></i> <span class='hnav-bar-btn-txt hover-label'>Search</span></a></li>
+										   <li class="show-on-mobile"><a href="#"  class="btn" onclick="$('#main_nav').toggle(); $('#main_search').toggle();"><i class="fa fa-search"></i> <span class='hnav-bar-btn-txt hover-label'>Search</span></a></li>
+										   <li class="show-on-mobile hide-on-bigger-dev"><a href="#"  class="btn" onclick="$('#mobile_nav').toggle();"><i class="fa fa-bars"></i> <span class='hnav-bar-btn-txt hover-label'>Expand the main menu</span></a></li>
 										   <li>&nbsp;&nbsp;<a href="#" class="btn"><i class="fa fa-sign-in-alt "></i> <span class='hnav-bar-btn-txt hover-label'>Log in</span></a> or <a href="#" class="btn"><i class="fa fa-user-plus "></i> <span class='hnav-bar-btn-txt hover-label'>Sign up</span></a></li>
 										</ul>
-									 </nav>				 
+									 </nav>
+									 
+									 <!-- Mobile nav -->
+                                     <nav id="mobile_nav">
+									     
+									 </nav>
                                    
+								     <!-- The main search form -->
 								    <form id="main_search" class="search-form">
 									    <input type="text" name="searchfor" placeholder="Search for...">
 										<select name="search-type">
@@ -80,7 +87,7 @@
 										</select>
 										<button type="submit" name="search-submit"><i class="fa fa-search"></i></button>
 										&nbsp;&nbsp;
-										<button type="button" class="close hover-label-wrapper" onclick="$('#main_nav').toggle(); $('#main_search').toggle();"><i class='fa fa-times'></i><span class="hnav-bar-btn-txt hover-label">Hide the search form</span></button>
+										<button type="button" class="close hover-label-wrapper search-hide-btn" onclick="$('#main_nav').toggle(); $('#main_search').toggle();"><i class='fa fa-times'></i><span class="hnav-bar-btn-txt hover-label">Hide the search form</span></button>
 									</form>
 								 </div>
 							 </div>

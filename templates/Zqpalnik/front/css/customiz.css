@@ -28,7 +28,7 @@ header{
 	  margin: 9px;
 }
 
-
+/**Beginning**  Horizontal nav dropdown  **/
 .horizontal-nav-dropdown {
 	display: none;
 	position: absolute;
@@ -95,8 +95,9 @@ li.horizontal-nav-dropdown-section a{
 li[class*="hnd-section-"]{
 	display:none;
 }
+/** End** Horizontal nav dropdown  **/
 
-
+/**Beginning**  Horizontal nav bar styles **/
 .horizontal-nav ul li{
 	 list-style-type: none;
 	 float: left;
@@ -119,7 +120,9 @@ li[class*="hnd-section-"]{
 	border-color: #357ea5;
 	color: #357ea5;
 }
+/**End**  Horizontal nav bar styles **/
 
+/**Beginning**  Search form styles **/
 .horizontal-nav, .search-form{
 	 float: right;
 }
@@ -128,6 +131,7 @@ li[class*="hnd-section-"]{
 	display:none;
 	 margin: 6px 0px;
 	 width: 90%;
+	 min-width: 310px;
 }
 .search-form input[type="text"],
 .search-form select,
@@ -157,7 +161,9 @@ li[class*="hnd-section-"]{
 	background-color: #357ea5;
 	color: rgb(230,230,230);
 }
+/**End**  Search form styles **/
 
+/**Beginning**  Hover label/ tooltip styles **/
 .hover-label-wrapper .hover-label{
 	    display: none;
 		position: absolute;
@@ -172,12 +178,58 @@ li[class*="hnd-section-"]{
 .hover-label-wrapper:hover  > .hover-label{
 	   display:block;
 }
+/**End**  Hover label/ tooltip styles **/
+
+.hide-on-bigger-dev{
+	  display: none;
+}
+
+/**Beginning**  Mobile nav styles **/
+
+#mobile_nav{
+	 display: none;
+	 
+}
+
+/**End**  Mobile nav styles **/
+
+@media only screen and (max-width: 520px){
+	  #main_nav ul li{
+		    display: none;
+	  }
+	  
+	  #main_nav ul li.show-on-mobile{
+		   display: block;
+	  }
+	  
+	  #main_nav{
+		  padding-right: 10px;
+	  }
+	  
+	   .search-form{
+		     width: 100%;
+			 top: 55px;
+			  text-align: right;
+	   }	   
+	   .search-form input{
+		   width: 70%; 
+	   }
+	   .search-form select{
+		   width: 24%;
+	   }	   
+	    .search-form button.search-hide-btn{
+		    position: absolute;
+			bottom: 55px;
+			right: 10px;
+	   }
+}
 
 @media only screen and (max-width: 660px){
 	   .search-form{
-		    position:relative;
+		    position:absolute;
 			z-index: 2;
-			left: 2%;
+			left: 1%;
+			background: #EDEDED;
 	   }
 }
 
