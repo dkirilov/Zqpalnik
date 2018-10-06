@@ -6,7 +6,7 @@
 
 body{
 	background: #EDEDED url('../img/noise_lines.png') fixed;
-	font-family: sans, Arial;
+	font-family: sans, Arial, Helvetica;
 	font-size: 12pt;
 }
 
@@ -21,12 +21,60 @@ header{
 	width: 100%;
 }
 
+/** Beginning**  Anchor elements(Hyperlinks) **/
+ a,
+ a:link,
+ a:visited{
+	 text-decoration: none;
+	 color: #357ea5;
+	 border-bottom: 1px dashed #357ea5;
+ }
+ 
+ a:hover{
+	 color: skyblue;
+	 border-bottom: none;
+ }
+/** End**  Anchor elements(Hyperlinks) **/
+
 .site-logo{
       font-size: 20pt;
 	  font-weight: bold;
 	  color: #357ea5;
 	  margin: 9px;
 }
+
+
+/** Beginning** Buttons **/
+   .btn-small-blue,
+   .btn-small-blue:link,
+   .btn-small-blue:visited,
+   .btn-normal-blue,
+   .btn-normal-blue:link,
+   .btn-normal-blue:visited{
+       background: #357ea5;
+	   color: #FFF;
+	   font-size: 12pt;
+	   padding: 10px 20px;
+	   border-radius: 3px;
+	   border: 1px solid #357ea5;
+	   box-shadow: 0px 0px 2px #357ea5;
+	   text-shadow: 0px 0px 1px #FFF;
+   }
+   .btn-small-blue:hover,
+   .btn-normal-blue:hover{
+	   background: #FFF;
+       color: #357ea5;
+	   box-shadow: 0px 0px 3px #357ea5;
+	   text-shadow: 0px 0px 2px #357ea5;
+   }
+   
+   .btn-small-blue,
+   .btn-small-blue:link,
+   .btn-small-blue:visited{
+	   padding: 5px 10px;
+	   font-size: 11pt;
+   }
+/** End** Buttons **/
 
 /**Beginning**  Horizontal nav dropdown  **/
 .horizontal-nav-dropdown {
@@ -75,6 +123,7 @@ header{
 	  padding-right: 10px;	  
 	  margin-left: 10px;
 	  border-radius: 3px;
+	  border-bottom: none;
 }
 .horizontal-nav-dropdown li a:hover{
 	  color: #12181c;
@@ -90,7 +139,7 @@ li.horizontal-nav-dropdown-section a{
 	  text-decoration: none;
 	  padding: 4px;
 	  margin-left: 0px;
-	  border-radius: 3px;	
+	  border-radius: 3px;
 }
 li[class*="hnd-section-"]{
 	display:none;
@@ -227,6 +276,7 @@ li[class*="hnd-section-"]{
 	 padding: 10px;
 	 width: 100%;
 	 line-height: 2;
+	 border-bottom: none;
 }
 #right_sidebar #mobile_nav ul li a:hover{
     background: #EDEDED;
@@ -235,6 +285,35 @@ li[class*="hnd-section-"]{
 }
 
 /**End**  Mobile nav styles **/
+
+/**Beginning**  Home page Welcome section  **/
+
+ #home_welcome_section{
+	 margin: 30px;
+	 margin-top: 50px;
+	 padding: 20px;
+ }
+ #home_welcome_section h2{
+	 text-align: center;
+	 color: #357ea5;
+	 margin: 6px;
+	 text-shadow: 1px 0px 0px #889;
+	 opacity: 0.9;
+}
+ #home_welcome_section div{
+	 background: rgba(20,20,20,0.8);
+	 padding: 10px;
+	 border-radius: 3px;
+	 color: #fff;
+	 text-shadow: 1px 0px 2px #357ea5;
+	 box-shadow: 1px 1px 3px #357ea5;
+ }
+ #home_welcome_section div button{
+	 margin: 20px;
+	 margin-bottom: 5px;
+ }
+ 
+/**End**  Home page Welcome section  **/
 
 @media only screen and (max-width: 520px){
 	  #main_nav ul li{
