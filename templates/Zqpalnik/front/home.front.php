@@ -26,3 +26,10 @@
 	   </div>
     </div>    
 </div>
+<div class="row">
+   <div class="col-xs">
+       <div class="box">
+	        <?php $sample_widget->render(); ?>
+	   </div>
+   </div>
+</div>

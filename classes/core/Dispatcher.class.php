@@ -6,6 +6,7 @@ class Dispatcher{
 	
 	private $page_name = null;
 	private $params = null;
+
 	
 	public  function run($path){
 		  $this->params = explode('/', $path);		  
@@ -29,6 +30,5 @@ class Dispatcher{
 	public function getParam($param_no){
 		 return $this->params[$param_no];
 	}
-	
 }
 ?>

@@ -19,6 +19,7 @@ header{
 	padding: 2px;
 	position: fixed;
 	width: 100%;
+	z-index: 665;
 }
 
 /** Beginning**  Anchor elements(Hyperlinks) **/
@@ -82,7 +83,7 @@ header{
 	position: absolute;
 	background: #12181c;
 	border: 4px solid #357ea5;
-	z-index: 2;
+	z-index: 666;
 	top: 60px;
 	margin-left: -20px;
 }
@@ -292,14 +293,15 @@ li[class*="hnd-section-"]{
 	 margin: 30px;
 	 margin-top: 50px;
 	 padding: 20px;
- }
+	 z-index: -666;
+}
  #home_welcome_section h2{
 	 text-align: center;
 	 color: #357ea5;
 	 margin: 6px;
 	 text-shadow: 1px 0px 0px #889;
 	 opacity: 0.9;
-}
+ }
  #home_welcome_section div{
 	 background: rgba(20,20,20,0.8);
 	 padding: 10px;

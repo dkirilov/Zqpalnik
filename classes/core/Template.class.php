@@ -10,11 +10,11 @@ class Template{
 	}
 	
 	public static function render404($template_name){
-		include_once(TEMPLATES_DIR . $template_name . '/front/404.php');
+		include_once(TEMPLATES_DIR_URL . $template_name . '/front/404.php');
 	}
 	
 	public static function getTitle(){
-		global $dispatcher;
+		global $dispatcher, $LANG;
 		
 		 if(!empty($LANG['page_title'])){
 			 return $LANG['page_title'];
@@ -29,7 +29,7 @@ class Template{
 		     global $LANG;
 			 
 			 // Loading common language file
-		      $path = TEMPLATES_DIR . $template_name . "/lang/" . $lang_code . "/common.lang.php";
+		      $path = TEMPLATES_DIR . $template_name .  DS . "lang" . DS . $lang_code . DS . "common.lang.php";
                if(file_exists($path)){
                     require_once($path);
                }else{
@@ -37,7 +37,7 @@ class Template{
 			   }
 			   
 			   // Loading the language file related with current page
-		       $path = TEMPLATES_DIR . $template_name . "/lang/" . $lang_code . "/" . $page_name . ".lang.php";
+		       $path = TEMPLATES_DIR . $template_name . DS . "lang" . DS . $lang_code . DS . $page_name . ".lang.php";
                if(file_exists($path)){
                     require_once($path);
                }else{
@@ -46,10 +46,12 @@ class Template{
 	}
 
 	private static function loadPage($page_name, $template_name){
-	     $header_path = TEMPLATES_DIR . $template_name . '/front/common/header.phtml';
-		 $footer_path = TEMPLATES_DIR . $template_name . '/front/common/footer.phtml';
-		 $backend_path = TEMPLATES_DIR . $template_name . '/back/' . $page_name . '.back.php';
-		 $frontend_path = TEMPLATES_DIR . $template_name . '/front/' . $page_name . '.front.php';
+		global $dispatcher,$LANG;
+		
+	     $header_path = TEMPLATES_DIR . $template_name . DS . 'front' . DS . 'common' . DS . 'header.phtml';
+		 $footer_path = TEMPLATES_DIR . $template_name . DS . 'front' . DS . 'common' . DS . 'footer.phtml';
+		 $backend_path = TEMPLATES_DIR . $template_name . DS . 'back' . DS . $page_name . '.back.php';
+		 $frontend_path = TEMPLATES_DIR . $template_name . DS. 'front' . DS . $page_name . '.front.php';
 		 
 		 if(file_exists($header_path)){
 			 include_once($header_path);			 
